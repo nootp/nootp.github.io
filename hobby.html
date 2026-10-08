@@ -11,6 +11,11 @@
         <link rel="icon" type="image/jpeg" href="pictures/cbbc.jpg">
         <title>nootp website</title>
     </head>
+    <script>
+  if (window.location.pathname.endsWith('.html')) {
+    window.location.href = window.location.pathname.replace('.html', '');
+  }
+    </script>
     <body>
         <div class="hobby">
             <div class="container">
