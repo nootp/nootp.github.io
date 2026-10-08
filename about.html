@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" type="image/jpeg" href="pictures/cbbc.jpg">
+        <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    var vx = 5;
+    var vy = 3;
+
+    var chiito = document.getElementById('bounce');
+
+    function setVelocityToRandom() {
+        // absolutely arbitrary numbers
+        var velocity = 5 + Math.random() * 2;
+        var angleDiff = (Math.random() - 0.5) * 0.75;
+        var oldAngle = Math.atan2(vy, vx);
+        var newAngle = oldAngle + angleDiff;
+        console.log(oldAngle,newAngle)
+        vx = velocity * Math.cos(newAngle);
+        vy = velocity * Math.sin(newAngle);
+    }
+
+    var counter = 0;
+
+    var x = 0;
+    var y = 0;
+
+    function step() {
+        window.requestAnimationFrame(step);
+
+        if(counter < 100) {
+            counter++;
+            return;
+        }
+
+        x += vx;
+        chiito.style.left = x + "px";
+
+        y += vy;
+        chiito.style.top = y + "px";
+
+        if((x < 0) || (x + chiito.width > window.innerWidth)) { vx *= -1; x += 3 * vx; setVelocityToRandom(); }
+        if((y < 0) || (y + chiito.height > window.innerHeight)) { vy *= -1; y += 3 * vy; setVelocityToRandom(); }
+    }
+
+    step();
+  });
+
+        </script>
+        <title>nootp website</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="about">
+                <div class="hisui-container">
+                    <img src="pictures/Hisui.png" class="hisui" alt="hisui peek" width="200" height="300">
+                    <button class="hisui-btn">hisui button</button>
+                </div>
+                <p class="about-description" align="center">I am nootp, 18 years old, and I am the owner of this <em><big><font color="#00d9ff">website</font></big></em>!</p>
+                <p class="about-description" align="center">I spent my week off <font color="#ff0000"><strong>school</strong></font> creating this website and this is my first website.</p>
+                <p class="about-description" align="center">I like to create music, draw <small>(mainly digital)</small>, computers, and programming stuff <small>(I'm not that good at it though)</small>.</p>
+                <p class="about-description" align="center">I am also trying to learn other stuff like arduino uno even though I haven't gotten the spare time lately.</p>
+                <p class="about-description" align="center">I'm not that socially outgoing and awkward unless you know me at a really deep level..</p>
+                <p class="about-description" align="center">Other than that I'm really <em><big><big><strong><font color="#ed3e3e">cool</strong></big></big></em></font> and <em><big><big><strong><font color="#fff700">goated</strong></big></big></em></font> at what I do. (✿´‿`)</p>
+                </div>
+            </div>
+        </div>
+                <img id="bounce" src="/pictures/chito.jpg" height="80" width="80" style="position:absolute;">
+        <nav class="navbar">
+            <div class="about-container">
+                <ul>
+                    <li>
+                        <a href="/index.html">< Back</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.querySelector(".hisui-btn");
+
+            button.addEventListener('click', function() {
+                const audio = new Audio('/music/BONUS.wav');
+                audio.play();
+                alert('hello i am hisui');
+            });
+        </script>
+    </body>
+</html>

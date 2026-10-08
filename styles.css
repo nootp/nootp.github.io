@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #081338;
+    color: #fff;
+    line-height: 1.5;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.400)), url(pictures/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+:root {
+    --light-color: #84d3f5;
+    --dark-color: #02051c;
+    --primary-color: #325066;
+    --light-gray: rgba(0, 0, 0, 0.05);
+    --dark-gray: rgba(0, 0, 0, 0.200);
+    --darker-gray: rgba(0, 0, 0, 0.5);
+
+}
+a {
+    text-decoration: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.unfixed-container-sm {
+    max-width: 800px;
+    padding: 0 15px;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+
+
+/* Navigation bar */
+.navbar .container {
+    display: flex;
+    margin: 100px auto;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.navbar ul li a {
+    padding: 10px 20px 10px 20px;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 0 5px #84d3f5;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: var(--light-color);
+}
+
+.navbar .about-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+/* Home page content */
+
+.hometext {
+    font-size: 20px;
+    line-height: 50px;
+    margin-top: 10px;
+}
+
+.profile {
+    box-sizing: border-box;
+    background-color: var(--dark-gray);
+    width: 700px;
+    height: 160px;
+    padding: 20px;
+    border: 3px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.40);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    margin: 100px auto 2px auto;
+    display: flex;
+}
+
+.profile-img {
+    box-sizing: border-box;
+    border: 3px;
+    border-radius: 20px;
+    margin: auto auto auto 2px;
+}
+
+.user-info {
+    margin: 3px auto 3px 5px;
+}
+
+.username {
+    font-size: 40px;
+}
+
+.usernames-alt {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.button-container {
+    box-sizing: border-box;
+    gap: 30px;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.github-btn {
+    border: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--primary-color);
+}
+
+.discord-btn {
+    border: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--primary-color);
+}
+
+.x-btn {
+    border: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.40);
+}
+
+.tiktok-btn {
+    border: 1px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.40);
+    border-style: solid;
+    border-color: var(--primary-color);
+}
+
+.audio-container {
+    text-align: center;
+}
+
+.hometext {
+    margin-top: 70px;
+}
+
+/* About page */
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 0 0;
+    padding: 3px;
+}
+.about {
+    box-sizing: border-box;
+    border: 3px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    padding: 3px;
+    margin-top: 50px;
+    height: 400px;
+    width: 1300px;
+    background-color: var(--dark-gray);
+
+}
+
+.about-description {
+    margin: 30px 10px;
+}
+
+.hisui-container {
+    position: absolute;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hisui-btn {
+    width: 100px;
+    color: #ed3e3e;
+}
+
+/* Hobby page content */
+
+.hobby .container {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.40);
+    border: 3px;
+    border-radius: 20px;
+    padding: 3px;
+    margin-top: 50px;
+    height: 700px;
+    width: 1500px;
+    background-color: var(--dark-gray);
+}
+
+.music-txt .txt {
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+.container .music {
+    margin: 50px auto;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.music img {
+    border-radius: 8px;
+}
+
+/* Interests page */
+
+.interest .container {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.40);
+    border: 3px;
+    border-radius: 20px;
+    padding: 3px;
+    margin-top: 50px;
+    height: 1500px;
+    width: 1500px;
+    background-color: var(--dark-gray);
+}
+
+.interest .txt {
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+.container .favs {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+
+.favs img{
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.container .like {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+
+.like img{
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.atxt {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 20px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/jpeg" href="pictures/cbbc.jpg">
+        <script type="text/javascript">
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var vx = 5;
+    var vy = 3;
+
+    var chiito = document.getElementById('bounce');
+
+    function setVelocityToRandom() {
+        // absolutely arbitrary numbers
+        var velocity = 5 + Math.random() * 2;
+        var angleDiff = (Math.random() - 0.5) * 0.75;
+        var oldAngle = Math.atan2(vy, vx);
+        var newAngle = oldAngle + angleDiff;
+        console.log(oldAngle,newAngle)
+        vx = velocity * Math.cos(newAngle);
+        vy = velocity * Math.sin(newAngle);
+    }
+
+    var counter = 0;
+
+    var x = 0;
+    var y = 0;
+
+    function step() {
+        window.requestAnimationFrame(step);
+
+        if(counter < 100) {
+            counter++;
+            return;
+        }
+
+        x += vx;
+        chiito.style.left = x + "px";
+
+        y += vy;
+        chiito.style.top = y + "px";
+
+        if((x < 0) || (x + chiito.width > window.innerWidth)) { vx *= -1; x += 3 * vx; setVelocityToRandom(); }
+        if((y < 0) || (y + chiito.height > window.innerHeight)) { vy *= -1; y += 3 * vy; setVelocityToRandom(); }
+    }
+
+    step();
+  });
+
+        </script>
+        <title>nootp website</title>
+    </head>
+    <body style="background-image: url(pictures/Yuri.jpg); background-size: 200px 220px;">
+        <marquee behavior="scroll" direction="up" scrollamount="12" class="tsuki">
+            <img src="pictures/tsukihime.jpg" width=230 height=280>
+        </marquee>
+        <img src="pictures/forgive.jpg" width=300 height=300 style="position:absolute;right:0%;bottom:0%top:100%;;z-index:-1;">
+        <img src="/pictures/chi.jpg" width=200 height=200 style="position:absolute;right:0%;bottom:0%;z-index:-1;">
+        <center>
+            <img src="pictures/Nose.jpg" width=250 height=300>
+        </center>
+        <audio autoplay controls>
+            <source src="music/Drunk as I Like.mp3" type="audio/mpeg">
+        </audio>
+        <img src="pictures/hisui.gif" type="pictures/gif" width=280 height=240 style="z-index;-100; position:absolute; left:75%;">
+        <img src="pictures/glt.gif" type="pictures/gif" width=350 height=320 style="z-index;-100; position:absolute; left:0%;bottom:0%;">
+        <img id="bounce" src="pictures/yuu.jpg" width=200 height=200 style="position:absolute;">
+    </body>
+</html>
+
+
