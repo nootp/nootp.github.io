@@ -11,6 +11,11 @@
         <link rel="icon" type="image/jpeg" href="pictures/cbbc.jpg">
         <title>nootp website</title>
     </head>
+    <script>
+  if (window.location.pathname.endsWith('.html')) {
+    window.location.href = window.location.pathname.replace('.html', '');
+  }
+</script>
     <body>
         <div class="profile">
             <img src="pictures/shubina0.jpg" class="profile-img" alt="asya shubina drawing by hymncrimsonmoon on twitter" width="110" height="100">
